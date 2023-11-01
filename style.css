@@ -1,8 +1,28 @@
-section {
+.content {
     text-align: center; 
     margin: auto;
     width: 450px;
     vertical-align: middle;
+    color: white;
+    
+}
+
+section {
+    background-image: url("https://images.unsplash.com/photo-1623039925595-bb30257f6717?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: 58% 49%;
+    background-size: 1200px;
+    padding: 3.5em 0 5.5em;
+    background-repeat: no-repeat;
+    
+}
+.content h1{
+    color: white;
+    background-color: black;
+    padding: .30em;
+    border-radius: 1em;
+}
+.content h2{
+    color: white;
 }
 
 h1{
