@@ -4,7 +4,7 @@ var express = require("express");
 var app = express();
 
 app.get("/", function (req, res) {
-    res.redirect("/index");
+    res.sendFile(path.join(__dirname, "/index.html"))
 });
 
 // setup http server to listen on HTTP_PORT
