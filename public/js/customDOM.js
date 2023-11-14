@@ -1,20 +1,30 @@
-const schoolLookup = document.querySelector('#info')
-const schoolPlchd = document.querySelector('#input')
+import React, { useState } from 'react';
 
-schoolLookup.addEventListener('click', ()=> {
-    console.log(schoolLookup.classList)
-    if(schoolLookup.classList == "infoName") {
-        schoolLookup.innerText = "I'd like to look up my Agency by name"
-        schoolPlchd.placeholder = "School's name"
-        
-        schoolLookup.classList.add('infoSchool')
-        schoolLookup.classList.remove('infoName')
-    } else if (schoolLookup.classList == "infoSchool") {
-        schoolLookup.innerText = "I'd like to look up my Agency by school"
-        schoolPlchd.placeholder = "Agency's name"
-        schoolLookup.classList.add('infoName')
-        schoolLookup.classList.remove('infoSchool')
+const SchoolLookup = () => {
+  const [isInfoName, setIsInfoName] = useState(true);
+  const [placeholder, setPlaceholder] = useState("School's name");
+  const [displayText, setDisplayText] = useState("I'd like to look up my Agency by name");
+
+  const handleLookupClick = () => {
+    if (isInfoName) {
+      setDisplayText("I'd like to look up my Agency by school");
+      setPlaceholder("Agency's name");
+    } else {
+      setDisplayText("I'd like to look up my Agency by name");
+      setPlaceholder("School's name");
     }
-    
-})
+
+    setIsInfoName(!isInfoName);
+  };
+
+  return (
+    <div id="info" onClick={handleLookupClick}>
+      {displayText}
+      <input id="input" type="text" placeholder={placeholder} />
+    </div>
+  );
+};
+
+export default SchoolLookup;
+
 
