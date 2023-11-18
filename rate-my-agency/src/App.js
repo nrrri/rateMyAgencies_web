@@ -2,28 +2,40 @@ import React, { useState } from 'react';
 import './style.css';
 
 function App() {
-  const [search,setSearch] = useState('');
+  // search type
+  const [search,setSearch] = useState(true);
+  // input
   const [agency, setAgency] = useState('');
   const [school,setSchool] = useState('');
+  // text -> combine to array later
+  const [info,setInfo] = useState("I'd like to look up my Agency by 'school'");
+  const [text,setText] = useState('Agency');
+  const [placeholder,setPlaceholder] = useState("Agency's name");
 
-const SearchInput = (search) => {
-  if(search === 'Agency') {
-    setAgency(search);
-  } else if (search === 'School') {
-    setSchool(search);
+const handleClick = () => {
+  if(search) {
+    setText("Agency");
+    setPlaceholder("Agency's name");
+    setInfo("I'd like to look up my Agency by 'school'");
+  } else {
+    setText("School")
+    setPlaceholder("School's name");
+    setInfo("I'd like to look up my Agency by 'name'");
   }
+  setSearch(!search);
+  
 }
 
 return (
   <div>
-  <h2 className='text'>Enter your <span id="emAgency">Agency</span> to get start</h2>
+  <h2 className='text'>Enter your <span id="emAgency">{text}</span> to get start</h2>
   <input className='input'
   value={agency}
   onChange={event => setAgency(agency)}
-  placeholder="Agency's name"
+  placeholder={placeholder}
   type='text'
   />
-  <p id='info' className='infoName'>I'd like to look up my Agency by school</p>
+  <p onClick={handleClick} id='info' className='infoName'>{info}</p>
   </div>
 );
 }
