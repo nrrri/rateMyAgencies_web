@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './css/style.css';
 
-function App() {
+function Search() {
   // search type
   const [search, setSearch] = useState(true);
   // input
@@ -64,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default Search;

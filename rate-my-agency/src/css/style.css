@@ -1,6 +1,6 @@
 .content {
     text-align: center; 
-    margin: auto;
+    margin: 2em auto;
     width: 450px;
     vertical-align: middle;
     color: white;
@@ -8,12 +8,18 @@
 }
 
 section {
-    background-image: url("https://images.unsplash.com/photo-1623039925595-bb30257f6717?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    /* background-image: url("https://images.unsplash.com/photo-1623039925595-bb30257f6717?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: 58% 49%;
     background-size: 1000px;
     padding: 3.5em 0 5.5em;
     background-repeat: no-repeat;
-    align-items: center;
+    align-items: center; */
+    width: 1440px;
+    height: 500px;
+    top: 211px;
+    left: 0;
+    background-image: url(../asset/cole-keister-rydTSO7xB5A-unsplash\ 1.png);
+    background-size: 100% 100%;
     
 }
 .content h1{
